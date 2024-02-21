@@ -1,0 +1,1 @@
+{"rule":"WITH_THE_EXCEPTION_OF","sentence":"^\\QWith the exception of synthesized audio entries, and the single person who's native language is Portuguese, all the entries with age_onset of 0 are native English speakers, and thus this represents the group of people who's native language is english.\\E$"}
