@@ -30,3 +30,28 @@ This document contains updates regarding the Speech Accent Analysis project
 * In terms of future goals, I plan to make a phonetic parser for the transcriptions so I can leverage the smaller phonetic features and modifications to the base symbols. The goal will be to tie together the conclusions that will be drawn in the phonetic analysis to the biographical speaker analysis.
 * When it comes to the specific repository license, I am going to stick with the GNU GENERAL PUBLIC LICENSE as I want to promote open access to and make the material in the repo readily available for people.
 * The new notebooks for this part are [`biographical_analysis.ipynb`](https://github.com/Data-Science-for-Linguists-2024/Speech-Accent-Analysis/blob/main/notebooks/biographical_analysis.ipynb) and [`full_data_processing.ipynb`](https://github.com/Data-Science-for-Linguists-2024/Speech-Accent-Analysis/blob/main/notebooks/full_data_processing.ipynb).  
+
+
+## 3rd Progress Report (04/08/2024)
+In [`full_data_processing.ipynb`](https://github.com/Data-Science-for-Linguists-2024/Speech-Accent-Analysis/blob/main/notebooks/full_data_processing.ipynb):
+- Focus on ensuring the `native_language` column  and `ethnologue_language_code is` is accurate and standardized with iso639 codes and names.
+- The `countries` column has been reviewed to affirm the correctness of country names or codes, again maintaining consistence with the iso standards.
+
+In [`biographical_analysis.ipynb`](https://github.com/Data-Science-for-Linguists-2024/Speech-Accent-Analysis/blob/main/notebooks/biographical_analysis.ipynb):  
+- I leveraged the Glottolog database to find the regions of the languages to generalize and reduce some of the languages being represented for the analysis.
+- Mapping Ethnologue Language Codes to macroareas, identifying and addressing any gaps in representation, missing values, or parsing errors.
+- Added more visualization and analysis for the biographical information by using the newly extrapolated macroareas and regions.
+
+(new) [`phonological_processing.ipynb`](https://github.com/Data-Science-for-Linguists-2024/Speech-Accent-Analysis/blob/main/notebooks/phonological_processing.ipynb):
+- Started with data integrity checks, identifying and correcting parsing abnormalities to ensure clean and reliable data for analysis.
+- Focused heavily on segment level analysis of phonemes and words, to iteratively fix abnormalities in parsing.
+- Panphon, a tool for processing phonological data, is employed to handle the transcription column, showcasing advanced data manipulation techniques.
+
+**Additional Notes:**
+- A bash script was written to convert all RTF transcription files to text for proper parsing.
+- The `.gif` extensions were to be replaced with `.txt` in the `phonetic_transcription` column.
+- In terms of the file structure of the data, I have added the bash script, the new `transcription_text` that the script dumped it's processed files into, as well as the pickled data frames for the processing.
+- I decided to split the data set into two data frames, `bio_df` containing the biographical and language info specifications, and the other, `features_df` containing the phonological features. Both of the data frames are parallelized through the `speakerid` so there is no problem with mapping associated entries.
+- I also added tables of content for the notebooks to make it easier to go back and fourth.
+- Although this progress report was't as 'phonological analysis
+ heavy as I'd liked it to be, I have set the stage to officially begin and to thoroughly analyze that for the presentation, as I have standardized all the entries and cleaned up all the columns including the transcriptions. My next goal is to completely dig through the `features_df` and connect my findings to any biographical details I can find, I am really tempted to consider proficiency for this part, but I have yet to figure out the detail on how I want to go about it.
