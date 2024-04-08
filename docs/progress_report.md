@@ -35,11 +35,11 @@ This document contains updates regarding the Speech Accent Analysis project
 ## 3rd Progress Report (04/08/2024)
 In [`full_data_processing.ipynb`](https://github.com/Data-Science-for-Linguists-2024/Speech-Accent-Analysis/blob/main/notebooks/full_data_processing.ipynb):
 - Focus on ensuring the `native_language` column  and `ethnologue_language_code is` is standardized with iso639 codes and names.
-- The `countries` column has been reviewed for correctness of country names or codes, again maintaining consistence with the iso standards.
+- The `countries` column has been reviewed for correctness of country names or codes, maintaining consistence with the iso standards.
 
 In [`biographical_analysis.ipynb`](https://github.com/Data-Science-for-Linguists-2024/Speech-Accent-Analysis/blob/main/notebooks/biographical_analysis.ipynb):  
 - I leveraged the Glottolog database to find the regions of the languages to generalize and reduce some of the languages being represented for the analysis.
-- Mapping Ethnologue Language Codes to macroareas, identifying and addressing any gaps in representation, missing values, or parsing errors.
+- Mapping Ethnologue Language Codes to macroareas, addressing any gaps in representation, missing values, or parsing errors.
 - Added more visualization and analysis for the biographical information by using the newly extrapolated macroareas and regions.
 
 (new) [`phonological_processing.ipynb`](https://github.com/Data-Science-for-Linguists-2024/Speech-Accent-Analysis/blob/main/notebooks/phonological_processing.ipynb):
